@@ -1,0 +1,25 @@
+/**
+ * @author $user
+ * @date $datetime
+ * @since ${pkg.version}
+ */
+
+import { FC, useState, useEffect } from 'react'
+import { useRequest } from 'src/hooks';
+// import classnames from 'classnames'
+import styles from './style.module.less'
+
+export interface ${ref.DirName}Props {
+    [key: string]: any
+}
+
+const ${ref.DirName}: FC<${ref.DirName}Props> = (props) => {
+const { config } = useRequest();
+    return (
+        <div className={styles.${ref.dirName}}>
+        ${ref.DirName}
+        </div>
+    )
+}
+
+export default ${ref.DirName}
