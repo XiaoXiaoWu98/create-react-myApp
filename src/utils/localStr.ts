@@ -1,8 +1,6 @@
 import { setItem, getItem, removeItem} from 'localforage';
 import { encryptByAES, decryptByAES } from './secret'
-// const tokenName = 'tokenName'
-// const username = 'username';
-// const password = 'password';
+
 const env = process.env.NODE_ENV
 
 

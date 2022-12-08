@@ -9,17 +9,17 @@ import qs from 'qs'
 export type Options = AxiosRequestConfig
 
 export interface ConfigurationParameters {
-  baseUrl: string
+  baseUrl?: string
 
   updateTokenUrl?: string
 
   goLogin?: () => void
   //登录接口
-  loginUrl: string
+  loginUrl?: string
 
-  logoutUrl: string
+  logoutUrl?: string
 
-  errorNotify: (msg: string) => void
+  errorNotify?: (msg: string) => void
 
   instance?: AxiosInstance
 }

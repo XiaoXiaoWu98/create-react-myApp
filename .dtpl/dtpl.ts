@@ -37,7 +37,8 @@ export default function (source: any) {
             return false;
           }
           const path = relativeFilePath.replace('\\', '')
-          if (!path.startsWith('srcpages') || path.endsWith('components')) {
+          source.app.debug(path, 'path:', path, relativeFilePath)
+          if ((!path.startsWith('srcpages') && !path.startsWith('src/pages')) || path.endsWith('components')) {
             return false;
           }
           return true;
