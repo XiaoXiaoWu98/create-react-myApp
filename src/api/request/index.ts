@@ -19,7 +19,7 @@ export interface ConfigurationParameters {
 
   logoutUrl?: string
 
-  errorNotify?: (msg: string) => void
+  errorNotify: (msg: string) => void
 
   instance?: AxiosInstance
 }
@@ -47,10 +47,10 @@ export class FetchAsync {
 
   constructor(configuration: ConfigurationParameters) {
     this.errorNotify = configuration.errorNotify
-    this.baseUrl = configuration.baseUrl;
-    this.updateTokenUrl = configuration.updateTokenUrl
-    this.loginUrl = configuration.loginUrl
-    this.logoutUrl = configuration.logoutUrl
+    this.baseUrl = configuration.baseUrl || '';
+    this.updateTokenUrl = configuration.updateTokenUrl || ''
+    this.loginUrl = configuration.loginUrl || ''
+    this.logoutUrl = configuration.logoutUrl || ''
     this.instance = axios.create({
       timeout: 20000,
       responseType: 'json',
