@@ -7,7 +7,7 @@
 import { FC, useState, useEffect } from 'react'
 import { useRequest } from 'src/hooks';
 // import classnames from 'classnames'
-import styles from './style.module.less'
+import styles from './index.module.less'
 
 export interface ${ref.DirName}Props {
     [key: string]: any
