@@ -2,31 +2,29 @@
 @good-bg: linear-gradient(90deg, #01cbeb 0%, #5e55ff 100%);
 @base-bg: linear-gradient(90deg, #51e2b5 0%, #79dd71 100%);
 @grid-bg: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 50%),
-    rgba(255, 255, 255, 50%)
+  to right,
+  rgba(255, 255, 255, 50%),
+  rgba(255, 255, 255, 50%)
 );
 @none-bg: linear-gradient(90deg, #d1e4ff 0%, #646685 100%);
 
-@mixin transparent-text {
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.transparent-text() {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-@mixin good-text {
-    @include transparent-text;
+.good-text() {
+  .transparent-text();
 
-    background-image: $good-bg;
+  background-image: @good-bg;
 }
 
-@mixin warning-text {
-    @include transparent-text;
-
-    background-image: $warning-bg;
+.warning-text() {
+  .transparent-text();
+  background-image: @warning-bg;
 }
 
-@mixin base-text {
-    @include transparent-text;
-
-    background-image: $base-bg;
+.base-text() {
+  .transparent-text();
+  background-image: @base-bg;
 }
