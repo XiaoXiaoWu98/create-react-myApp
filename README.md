@@ -1,2 +1,2 @@
 ### 前言
-1. 安装vscode插件 **dot-template**
+1. 基于react、typescript、craco搭建的react项目
